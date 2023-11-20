@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,7 @@ namespace Todo.Services.EntityServices
 
         public async Task<User> InsertAsync(User entity)
         {
+            entity.Password = entity.Password.CryptPassword();
             await _userRepository.Insert(entity);
             return entity;
         }
