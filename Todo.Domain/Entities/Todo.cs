@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Todo.Domain.Entities
 {
-    public class Todo
+    public class Todo: BaseEntity
     {
         public string Name { get; set; }
         public DateTime? DueDate { get; set; }

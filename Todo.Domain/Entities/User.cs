@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Todo.Domain.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
         public string Name { get; set; }
         public string Email { get; set; }
