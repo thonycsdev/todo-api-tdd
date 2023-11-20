@@ -21,9 +21,10 @@ namespace Todo.Services.EntityServices
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<User>> GetAllAsync()
+        public async Task<IEnumerable<User>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var result = await _userRepository.GetAllAsync();
+            return result;
         }
 
         public Task<User> GetSingleAsync(int id)
@@ -31,9 +32,10 @@ namespace Todo.Services.EntityServices
             throw new NotImplementedException();
         }
 
-        public Task<User> InsertAsync(User entity)
+        public async Task<User> InsertAsync(User entity)
         {
-            throw new NotImplementedException();
+            await _userRepository.Insert(entity);
+            return entity;
         }
 
         public Task UpdateAsync(User entity)
