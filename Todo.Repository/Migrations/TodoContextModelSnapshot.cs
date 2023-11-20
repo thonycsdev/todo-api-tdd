@@ -56,7 +56,7 @@ namespace Todo.Repository.Migrations
 
                     b.HasIndex("CreatedById");
 
-                    b.ToTable("Todos");
+                    b.ToTable("Todos", (string)null);
                 });
 
             modelBuilder.Entity("Todo.Domain.Entities.User", b =>
@@ -87,7 +87,7 @@ namespace Todo.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Todo.Domain.Entities.Todo", b =>
