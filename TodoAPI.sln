@@ -5,13 +5,13 @@ VisualStudioVersion = 17.9.34310.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoAPI", "TodoAPI\TodoAPI.csproj", "{4AF7D767-FAA2-4260-B3A2-8EE7828E9F35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Services", "Todo.Services\Todo.Services.csproj", "{9CFF6313-1B9C-44AF-8B9B-5CEBC052EC06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Todo.Services\Services.csproj", "{9CFF6313-1B9C-44AF-8B9B-5CEBC052EC06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Repository", "Todo.Repository\Todo.Repository.csproj", "{F3ED8E92-708E-4EE1-9A8F-B1E45F8B37A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Todo.Repository\Repository.csproj", "{F3ED8E92-708E-4EE1-9A8F-B1E45F8B37A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Domain", "Todo.Domain\Todo.Domain.csproj", "{79EF4C4F-EEA0-4664-95A2-FD22F3D3DC20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Todo.Domain\Domain.csproj", "{79EF4C4F-EEA0-4664-95A2-FD22F3D3DC20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Tests", "Todo.Tests\Todo.Tests.csproj", "{800DEBBD-B24A-4309-854A-648119AA85F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Todo.Tests\Tests.csproj", "{800DEBBD-B24A-4309-854A-648119AA85F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
