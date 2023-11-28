@@ -12,7 +12,7 @@ namespace Todo.Services.Interfaces
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetSingleAsync(int id);
         Task<T> InsertAsync(T entity);
-        Task UpdateAsync(T entity);
+        Task UpdateAsync(T entity, int id);
         Task DeleteAsync(int id);
     }
 }

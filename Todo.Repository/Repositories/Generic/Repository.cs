@@ -41,9 +41,12 @@ namespace Todo.Repository.Repositories.Generic
             throw new NotImplementedException();
         }
 
-        public Task<T> GetSingleAsync(Expression<Func<T, bool>>? expression = null)
+        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression = null)
         {
-            throw new NotImplementedException();
+            var result = await _entity.Where(expression).FirstOrDefaultAsync();
+            if(result is null)
+               throw new ArgumentNullException("Entity not found");
+            return result;
         }
 
         public async Task Insert(T entity)

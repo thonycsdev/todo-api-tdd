@@ -17,9 +17,9 @@ namespace Todo.Services.EntityServices
         {
             _userRepository = userRepository;
         }
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            await _userRepository.Delete(id);
         }
 
         public async Task<IEnumerable<User>> GetAllAsync()
@@ -28,9 +28,13 @@ namespace Todo.Services.EntityServices
             return result;
         }
 
-        public Task<User> GetSingleAsync(int id)
+        public async Task<User> GetSingleAsync(int id)
         {
-            throw new NotImplementedException();
+                var result = await _userRepository.GetSingleAsync(x => x.Id == id);
+                if(result is null)
+                    throw new IndexOutOfRangeException();
+                return result;
+
         }
 
         public async Task<User> InsertAsync(User entity)
@@ -40,7 +44,7 @@ namespace Todo.Services.EntityServices
             return entity;
         }
 
-        public Task UpdateAsync(User entity)
+        public Task UpdateAsync(User entity, int id)
         {
             throw new NotImplementedException();
         }
