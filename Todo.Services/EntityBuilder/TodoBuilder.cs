@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,12 +33,16 @@ namespace Todo.Services.EntityBuilder
 
         public TodoBuilder WithName(string name)
         {
+            if (string.IsNullOrEmpty(name))
+                throw new ArgumentNullException("Name cannot be null or empty");
             Name = name;
             return this;
         }
 
         public TodoBuilder WithDescription(string description)
         {
+            if (string.IsNullOrEmpty(description))
+                throw new ArgumentNullException("DescriptionAttribute cannot be null or empty");
             Description = description;
             return this;
         }

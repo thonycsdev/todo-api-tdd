@@ -28,6 +28,22 @@ namespace Todo.Tests.BuildersTests
             Assert.NotNull(todo);
         }
 
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void ShouldThrowAnErrorWhenTheNameIsNullOrEmpty(string name)
+        {
+            Assert.Throws<ArgumentNullException>(() => TodoBuilder.New().WithUser(_user).WithName(name).Build());
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void ShouldThrowAnErrorWhenTheDescriptionIsNullOrEmpty(string description)
+        {
+            Assert.Throws<ArgumentNullException>(() => TodoBuilder.New().WithUser(_user).WithDescription(description).Build());
+        }
+
         [Fact]
         public void ShouldCreateANewTodoWithName()
         {
